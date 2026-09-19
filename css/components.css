@@ -1,0 +1,170 @@
+/* Part of HORIZON dashboard styles — see css/base.css for design tokens (:root). */
+
+/* ===== View panels ===== */
+  .view{ display: none; }
+  .view.active{ display: block; }
+
+  .panel-block{
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px;
+    margin-bottom: 18px;
+  }
+  .panel-block h3{ font-size: 15px; margin-bottom: 4px; color: var(--text); }
+  .panel-block .panel-sub{ font-size: 11.5px; color: var(--text-faint); margin-bottom: 18px; }
+  .panel-block p{ font-size: 12.5px; color: var(--text-dim); line-height: 1.6; }
+
+  .download-row{
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .download-row:last-child{ border-bottom: none; }
+  .download-row .dl-name{ font-size: 13px; font-weight: 600; }
+  .download-row .dl-meta{ font-size: 11px; color: var(--text-faint); margin-top: 2px; }
+
+  .howto-step{ display: flex; gap: 14px; margin-bottom: 20px; }
+  .howto-step:last-child{ margin-bottom: 0; }
+  .howto-num{
+    width: 26px; height: 26px; border-radius: 50%;
+    background: rgba(139,92,246,0.14); color: var(--purple-2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0;
+  }
+  .howto-step h4{ font-size: 13.5px; margin-bottom: 4px; }
+  .howto-step p{ font-size: 12px; color: var(--text-dim); }
+
+  /* ===== Admin: tabs ===== */
+  .admin-tabs{
+    display: flex;
+    gap: 6px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+  }
+  .admin-tab{
+    padding: 10px 16px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .admin-tab:hover{ color: var(--text); }
+  .admin-tab.active{ color: var(--amber); border-bottom-color: var(--amber); }
+
+  .admin-view{ display: none; }
+  .admin-view.active{ display: block; }
+
+  .form-row{ display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+  .form-row label{ font-size: 11.5px; color: var(--text-dim); font-weight: 600; }
+  .form-row input, .form-row select{
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 10px 13px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+  }
+  .form-row input:focus, .form-row select:focus{ border-color: var(--purple); }
+  .form-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .duration-picker{ display: flex; flex-wrap: wrap; gap: 8px; }
+  .duration-chip{
+    padding: 8px 15px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--panel-2);
+    color: var(--text-dim);
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .duration-chip:hover{ color: var(--text); }
+  .duration-chip.selected{
+    background: rgba(139,92,246,0.15);
+    border-color: rgba(139,92,246,0.4);
+    color: var(--purple-2);
+  }
+
+  .stepper{ display: flex; align-items: center; gap: 10px; }
+  .stepper button{
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--panel-2);
+    color: var(--text);
+    font-size: 15px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .stepper input{
+    width: 54px; text-align: center;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 13px;
+    padding: 8px 0;
+  }
+
+  table.data-table{ width: 100%; border-collapse: collapse; }
+  table.data-table th{
+    text-align: left;
+    font-size: 10.5px;
+    letter-spacing: 0.4px;
+    color: var(--text-faint);
+    padding: 0 10px 10px 10px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+  }
+  table.data-table td{
+    padding: 12px 10px;
+    font-size: 12.5px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  table.data-table tr:last-child td{ border-bottom: none; }
+  .key-code{ font-family: 'JetBrains Mono', monospace; color: var(--purple-2); font-weight: 600; letter-spacing: 0.3px; }
+  .icon-btn{
+    background: none; border: none; color: var(--text-faint); cursor: pointer;
+    padding: 5px; border-radius: 6px; display: inline-flex;
+  }
+  .icon-btn:hover{ color: var(--text); background: rgba(255,255,255,0.05); }
+  .icon-btn svg{ width: 14px; height: 14px; }
+  .empty-row{ text-align: center; color: var(--text-faint); padding: 24px 0; font-size: 12px; }
+
+  .toggle{
+    width: 38px; height: 22px;
+    border-radius: 999px;
+    background: var(--panel-3);
+    border: 1px solid var(--border);
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .toggle .knob{
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--text-faint);
+    position: absolute;
+    top: 2px; left: 2px;
+    transition: left 0.15s ease, background 0.15s ease;
+  }
+  .toggle.on{ background: rgba(34,197,94,0.15); border-color: rgba(34,197,94,0.4); }
+  .toggle.on .knob{ left: 18px; background: var(--green); }
+
+  .config-row{
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    gap: 16px;
+  }
+  .config-row:last-child{ border-bottom: none; }
+  .config-row .config-label{ font-size: 13px; font-weight: 600; }
+  .config-row .config-sub{ font-size: 11px; color: var(--text-faint); margin-top: 2px; }

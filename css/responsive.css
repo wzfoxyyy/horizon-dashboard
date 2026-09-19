@@ -1,0 +1,10 @@
+/* Part of HORIZON dashboard styles — see css/base.css for design tokens (:root). */
+
+@media (max-width: 760px){
+    #appShell{ flex-direction: column; }
+    .sidebar{ width: 100%; min-width: 0; flex-direction: row; align-items: center; padding: 14px 18px; }
+    .brand{ border: none; padding: 0; margin: 0; }
+    nav, .sidebar-footer{ display: none; }
+    main{ padding: 24px; }
+    .form-grid{ grid-template-columns: 1fr; }
+  }

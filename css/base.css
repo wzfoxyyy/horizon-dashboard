@@ -1,0 +1,32 @@
+:root{
+    --bg: #0a0a0e;
+    --panel: #111117;
+    --panel-2: #15151d;
+    --panel-3: #1a1a24;
+    --border: #232330;
+    --text: #f2f2f5;
+    --text-dim: #8c8c9a;
+    --text-faint: #55555f;
+    --purple: #8b5cf6;
+    --purple-2: #a78bfa;
+    --purple-glow: rgba(139,92,246,0.35);
+    --green: #22c55e;
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --sky: #38bdf8;
+    --radius: 14px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  body{
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(139,92,246,0.10), transparent 60%),
+      radial-gradient(ellipse 700px 400px at 100% 100%, rgba(139,92,246,0.06), transparent 60%);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100vh;
+    display: flex;
+    -webkit-font-smoothing: antialiased;
+  }
